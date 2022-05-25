@@ -38,15 +38,15 @@ end
 
 local menu
 do
-    local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/iloveyouthomas/secureload/main/cripware/library.lua"))()
+    local library = loadstring(game:HttpGet("https://pastebin.com/raw/Y9GV7aj9"))()
 
     menu = library.new([[universal <font color="rgb(78, 93, 234)">v1</font>]], "nemv2\\")
     local tabs = {
-        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
-        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
-        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
-        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
-        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
+        menu.new_tab(),
+        menu.new_tab(),
+        menu.new_tab(),
+        menu.new_tab(),
+        menu.new_tab(),
     }
 
     do
