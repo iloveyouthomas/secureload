@@ -184,7 +184,7 @@ function library.new(library_title, cfg_location)
         BorderColor3 = Color3.fromRGB(78, 93, 234),
         Position = UDim2.new(0.5, 0, 0.5, 0),
         Size = UDim2.new(0, 700, 0, 500),
-        Image = "http://www.roblox.com/asset/?id=7300333488",
+        Image = "http://www.roblox.com/asset/?id=7205257578", -- fix needed
         AutoButtonColor = false,
         Modal = true,
     }, ScreenGui)
@@ -233,7 +233,7 @@ function library.new(library_title, cfg_location)
     local is_first_tab = true
     local selected_tab
     local tab_num = 1
-    function menu.new_tab(tab_image)
+    function menu.new_tab()
         local tab = {tab_num = tab_num}
         menu.values[tab_num] = {}
         tab_num = tab_num + 1
@@ -242,17 +242,10 @@ function library.new(library_title, cfg_location)
             BackgroundColor3 = Color3.fromRGB(255, 255, 255),
             BackgroundTransparency = 1,
             Size = UDim2.new(0, 76, 0, 90),
-            Text = "",
+            Text = tab_num,
         }, TabButtons)
 
-        local TabImage = library:create("ImageLabel", {
-            AnchorPoint = Vector2.new(0.5, 0.5),
-            BackgroundTransparency = 1,
-            Position = UDim2.new(0.5, 0, 0.5, 0),
-            Size = UDim2.new(0, 32, 0, 32),
-            Image = "",
-            ImageColor3 = Color3.fromRGB(100, 100, 100),
-        }, TabButton)
+        
 
         local TabSections = Instance.new("Frame")
         local TabFrames = Instance.new("Frame")
@@ -287,8 +280,6 @@ function library.new(library_title, cfg_location)
         if is_first_tab then
             is_first_tab = false
             selected_tab = TabButton
-
-            TabImage.ImageColor3 = Color3.fromRGB(84, 101, 255)
             Tab.Visible = true
         end
 
@@ -305,12 +296,10 @@ function library.new(library_title, cfg_location)
             end
             Tab.Visible = true
             selected_tab = TabButton
-            library:tween(TabImage, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(84, 101, 255)})
         end)
         TabButton.MouseEnter:Connect(function()
             if selected_tab == TabButton then return end
 
-            library:tween(TabImage, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255, 255, 255)})
         end)
         TabButton.MouseLeave:Connect(function()
             if selected_tab == TabButton then return end
