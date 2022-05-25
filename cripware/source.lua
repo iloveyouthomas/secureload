@@ -42,11 +42,11 @@ do
 
     menu = library.new([[universal <font color="rgb(78, 93, 234)">v1</font>]], "nemv2\\")
     local tabs = {
-        menu.new_tab("http://www.roblox.com/asset/?id=7300477598"),
-        menu.new_tab("http://www.roblox.com/asset/?id=7300535052"),
-        menu.new_tab("http://www.roblox.com/asset/?id=7300480952"),
-        menu.new_tab("http://www.roblox.com/asset/?id=7300486042"),
-        menu.new_tab("http://www.roblox.com/asset/?id=7300489566"),
+        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
+        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
+        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
+        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
+        menu.new_tab("http://www.roblox.com/asset/?id=7070981221"),
     }
 
     do
