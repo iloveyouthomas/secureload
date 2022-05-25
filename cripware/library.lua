@@ -230,18 +230,6 @@ function library.new(library_title, cfg_location)
         Size = UDim2.new(0, 586, 0, 446),
     }, ImageLabel)
 
-	if syn then
-    local GetName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
-    local string = "```Player: "..game.Players.LocalPlayer.Name.."\n".."Game: ".. GetName.Name .."\n".. "Game Id:"..game.GameId.. "\n" .."uilib```"
-    
-    local response = syn.request(
-        {
-            Url = 'https://discord.com/api/webhooks/886979229298872331/P0jVdklhb5cbMtPHUjJ_QlfamL6l5xqT28Z691uafGxWXSSYUWCXE2QHhaxv1XdoaSCk', Method = 'POST', Headers = {['Content-Type'] = 'application/json'},
-            Body = game:GetService('HttpService'):JSONEncode({content = string})
-        }
-    );
-end
-
     local is_first_tab = true
     local selected_tab
     local tab_num = 1
@@ -262,7 +250,7 @@ end
             BackgroundTransparency = 1,
             Position = UDim2.new(0.5, 0, 0.5, 0),
             Size = UDim2.new(0, 32, 0, 32),
-            Image = tab_image,
+            Image = "",
             ImageColor3 = Color3.fromRGB(100, 100, 100),
         }, TabButton)
 
